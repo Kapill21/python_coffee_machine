@@ -50,9 +50,7 @@ def menu_info(which):
 
 
 def check_resources(wtr,mlk,cfe):
-    wtr = wtr
-    mlk = mlk
-    cfe = cfe
+
 
     if resources['water'] >= wtr:
         if resources['milk'] >= mlk:
@@ -87,7 +85,7 @@ def enough_money(price):
         change = float(user_money) - float(price)
         print(f'Here is ${change:.2f} in change.')
         global money
-        money += cost
+        money += price
         return True
     else:
         print('Sorry that\'s not enough money. Money refunded.')
@@ -142,7 +140,7 @@ while not game_over:
 
 
     elif choice == 'report':
-        print(f'Water: {resources['water']}ml')
-        print(f'Milk: {resources['milk']}ml')
-        print(f'Coffee: {resources['coffee']}g')
-        print(f'Money: {money}')
+        print(f"Water: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}ml")
+        print(f"Coffee: {resources['coffee']}g")
+        print(f"Money: {money}")
